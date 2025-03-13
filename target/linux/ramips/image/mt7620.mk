@@ -149,6 +149,18 @@ define Device/bdcom_wap2100-sk
 endef
 TARGET_DEVICES += bdcom_wap2100-sk
 
+define Device/belkin_f7d7602v2
+  SOC := mt7620a
+  IMAGE_SIZE := 16384k
+  DEVICE_VENDOR := Belkin
+  DEVICE_MODEL := F7D7602V2
+  UBOOT_PATH := $(STAGING_DIR_IMAGE)/mt7620_belkin_f7d7602v2-u-boot-with-spl.bin
+  IMAGES += full.bin
+  IMAGE/full.bin := append-uboot | pad-to 256k | append-kernel |\
+                  pad-to 3392k | append-rootfs | pad-to 16384k
+endef
+TARGET_DEVICES += belkin_f7d7602v2
+
 define Device/bolt_bl100
   SOC := mt7620a
   IMAGE_SIZE := 15872k
