@@ -48,6 +48,15 @@ define U-Boot/mt7620_rfb
   UBOOT_IMAGE:=u-boot-with-spl.bin
 endef
 
+define U-Boot/mt7620_belkin_f7d7602v2
+  NAME:=Belkin Netcam F7D7602V2
+  UBOOT_CONFIG:=mt7620_belkin_f7d7602v2
+  BUILD_DEVICES:=belkin_f7d7602v2
+  BUILD_TARGET:=ramips
+  BUILD_SUBTARGET:=mt7620
+  UBOOT_IMAGE:=u-boot-with-spl.bin
+endef
+
 define U-Boot/mt7620_mt7530_rfb
   NAME:=MT7620+MT7530 Reference Board
   UBOOT_CONFIG:=mt7620_mt7530_rfb
@@ -814,6 +823,7 @@ endef
 UBOOT_TARGETS := \
 	mt7620_mt7530_rfb \
 	mt7620_rfb \
+  mt7620_belkin_f7d7602v2 \
 	mt7621_nand_rfb \
 	mt7621_rfb \
 	mt7621_zbtlink_zbt-wg3526-16m \

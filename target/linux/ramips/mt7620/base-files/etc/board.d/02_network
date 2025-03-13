@@ -41,6 +41,7 @@ ramips_setup_interfaces()
 		;;
 	alfa-network,tube-e4g|\
 	ampedwireless,b1200ex|\
+	belkin,f7d7602v2|\
 	buffalo,wmr-300|\
 	dlink,dch-m225|\
 	edimax,ew-7476rpc|\
