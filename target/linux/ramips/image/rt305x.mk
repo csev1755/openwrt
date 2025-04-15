@@ -1177,6 +1177,7 @@ endef
 TARGET_DEVICES += vocore_vocore-8m
 
 define Device/wansview_ncs601w
+  $(Device/uimage-lzma-loader)
   SOC := rt5350
   IMAGE_SIZE := 7872k
   DEVICE_VENDOR := Wansview
