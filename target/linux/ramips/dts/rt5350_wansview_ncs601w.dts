@@ -3,7 +3,12 @@
 / {
 	compatible = "wansview,ncs601w", "ralink,rt5350-soc";
 	model = "Wansview NCS601W";
-};
+
+	memory@0 {
+		reg = <0x0 0x4000000>;
+		device_type = "memory";
+	};
+};	
 
 &spi0 {
 	status = "okay";
