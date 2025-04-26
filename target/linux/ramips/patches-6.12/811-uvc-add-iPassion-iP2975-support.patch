@@ -1,0 +1,24 @@
+diff --git a/drivers/media/usb/uvc/uvc_driver.c b/drivers/media/usb/uvc/uvc_driver.c
+index ae2e8bd2b..2178bb668 100644
+--- a/drivers/media/usb/uvc/uvc_driver.c
++++ b/drivers/media/usb/uvc/uvc_driver.c
+@@ -3287,6 +3287,19 @@ static const struct usb_device_id uvc_ids[] = {
+ 	  .bInterfaceSubClass	= 1,
+ 	  .bInterfaceProtocol	= 0,
+ 	  .driver_info		= UVC_INFO_META(V4L2_META_FMT_D4XX) },
++    /* iPassion iP2975 Module */
++    { .match_flags 		= USB_DEVICE_ID_MATCH_DEVICE
++		        | USB_DEVICE_ID_MATCH_INT_INFO,
++	  .idVendor 	= 0x1B3B,
++	  .idProduct 		= 0x2975,
++	  .bInterfaceClass 	= USB_CLASS_VIDEO,
++	  .bInterfaceSubClass 	= 1,
++	  .bInterfaceProtocol 	= 0,
++	  .driver_info      = UVC_INFO_QUIRK(UVC_QUIRK_PROBE_MINMAX
++				| UVC_QUIRK_IGNORE_SELECTOR_UNIT
++				| UVC_QUIRK_MJPEG_NO_EOF
++				| UVC_QUIRK_FIX_BANDWIDTH
++				| UVC_QUIRK_STREAM_NO_FID) },
+ 	/* Generic USB Video Class */
+ 	{ USB_INTERFACE_INFO(USB_CLASS_VIDEO, 1, UVC_PC_PROTOCOL_UNDEFINED) },
+ 	{ USB_INTERFACE_INFO(USB_CLASS_VIDEO, 1, UVC_PC_PROTOCOL_15) },
