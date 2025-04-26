@@ -1182,7 +1182,7 @@ define Device/wansview_ncs601w
   IMAGE_SIZE := 7872k
   DEVICE_VENDOR := Wansview
   DEVICE_MODEL := NCS601W
-  DEVICE_PACKAGES := kmod-video-core kmod-video-uvc kmod-usb-ohci
+  DEVICE_PACKAGES := kmod-video-core kmod-video-uvc kmod-usb-ohci kmod-sound-core kmod-usb-audio
   SUPPORTED_DEVICES += ncs601w
 endef
 TARGET_DEVICES += wansview_ncs601w
