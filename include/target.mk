@@ -10,7 +10,7 @@ __target_inc=1
 ##@
 # @brief Default device type ( basic | nas | router ).
 ##
-DEVICE_TYPE?=router
+DEVICE_TYPE?=basic
 
 ##@
 # @brief Default packages.
